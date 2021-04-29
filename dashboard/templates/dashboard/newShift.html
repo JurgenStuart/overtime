@@ -1,0 +1,14 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags %}
+  {% block content%}     
+        <div class="content-section">
+            <form method="POST"> 
+               <fieldset class="form-group">
+                    {{ newShift | crispy}}
+               </fieldset> 
+            </form>
+            <div class="border-top pt-3"> 
+                </small>
+            </div> 
+        </div>
+  {% endblock content%}

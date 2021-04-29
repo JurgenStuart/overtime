@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import avlShifts, stores
 from django.contrib.auth.decorators import login_required
 from users.models import UserProfile
@@ -19,7 +19,8 @@ def showstores(request):
     }
     return render(request,'dashboard/stores.html', context)
 
-@login_required
-def createShift(request): 
-    if request.method == 'POST'
-    
+
+def makeShift(request):
+        newShift = createShift()
+        newShift.save()
+        return redirect('dashboard-home')
