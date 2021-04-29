@@ -1,0 +1,28 @@
+{% extends "dashboard/base.html" %}
+  {% block content%} 
+       
+     {% for stores in stores %}
+    
+      <div class="card" >
+       <div class="card-body">
+        <article class="media content-section">
+          <div class="media-body">
+           <div class="article-title">
+             <a class="article-title" >Store Number: {{ stores.store_Number }}</a>
+           </div>
+           <h3><a class="article-content">Store Name: {{ stores.store_Name}} </a></h3>
+           <p class="article-content">Store address: {{ stores.store_address}}</p>
+           <p class=" article-content">Contact: {{stores.store_Contact}}</p>
+          </div>
+        </article>
+       </div>
+      </div>       
+   
+
+        {% endfor %}
+ 
+      
+        
+                
+                
+  {% endblock content%}

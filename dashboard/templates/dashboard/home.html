@@ -1,0 +1,30 @@
+{% extends "dashboard/base.html" %}
+  {% block content%} 
+       
+     {% for avlShifts in Shifts %}
+    
+      <div class="card" >
+       <div class="card-body">
+        <article class="media content-section">
+          <div class="media-body">
+           <div class="article-title">
+             <a class="article-title" >Store: {{ avlShifts.store_Number }}</a>
+           </div>
+           <h2><a class="article-content">{{avlShifts.shift_Date }} </a></h2>
+           <h2><a class="article-content">Shift Time: {{ avlShifts.shift_Time }} </a></h2>
+           <p class="article-content">Store address: {{ avlShifts.store_Number.store_address}}</p>
+           <p class=" article-content">Contact: {{avlShifts.store_Number.store_Contact}}
+          </div>
+        </article>
+        <a href="#" class="btn btn-primary">Request to work</a>
+       </div>
+      </div>       
+   
+
+        {% endfor %}
+ 
+      
+        
+                
+                
+  {% endblock content%}
